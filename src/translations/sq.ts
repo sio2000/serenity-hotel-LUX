@@ -65,4 +65,23 @@ export const sq = {
   room_105_mountain_desc: "Dhomë dyshe deluxe me pamje nga mali.",
   room_101_mountain_castle: "Deluxe Dyshe me Pamje Mali/Kalaja 101",
   room_101_mountain_castle_desc: "Dhomë dyshe deluxe me pamje nga mali dhe kalaja.",
+  
+  // Pool Section
+  pool_section_title: "Pishina Jonë e Madhe",
+  pool_section_subtitle: "Zbuloni pishinën tonë luksoze me shtretër të rehatshme dhe shijoni qetësinë e ujit nën diellin shqiptar.",
+  pool_main_image_alt: "Pishina e madhe e Villa Serenity me shtretër",
+  pool_main_title: "Pishina e Madhe",
+  pool_main_description: "Një pishinë e bollshme me ujë të pastër dhe shtretër të rehatshme për të shijuar relaksimin dhe diellin.",
+  pool_large_size: "Pishina e Madhe",
+  pool_large_size_desc: "Pishinë e bollshme me ujë të pastër për not të rehatshëm dhe relaksim.",
+  pool_sun_loungers: "Shtretër",
+  pool_sun_loungers_desc: "Shtretër të rehatshme rreth pishinës për diell dhe relaksim.",
+  pool_sunbathing: "Diell",
+  pool_sunbathing_desc: "Mjedis i përsosur për diell me akses të drejtpërdrejtë në pishinë.",
+  pool_refreshment: "Freskim",
+  pool_refreshment_desc: "Shijoni freskinë e ujit dhe qetësinë e mjedisit.",
+  pool_gallery_title: "Galeria e Pishinës",
+  pool_image: "Pishina",
+  pool_cta_title: "Rezervoni Qëndrimin Tuaj",
+  pool_cta_description: "Ejani dhe shijoni pishinën tonë luksoze dhe shtretër të rehatshme. Rezervoni tani për përvojën më të mirë.",
 }; 

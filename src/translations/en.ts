@@ -124,4 +124,23 @@ export const en = {
   room_105_mountain_desc: "Deluxe double room with mountain view.",
   room_101_mountain_castle: "Deluxe Double Mountain/Castle View 101",
   room_101_mountain_castle_desc: "Deluxe double room with mountain and castle view.",
+  
+  // Pool Section
+  pool_section_title: "Our Large Swimming Pool",
+  pool_section_subtitle: "Discover our luxurious swimming pool with comfortable sun loungers and enjoy the tranquility of water under the Albanian sun.",
+  pool_main_image_alt: "Villa Serenity's large swimming pool with sun loungers",
+  pool_main_title: "The Large Swimming Pool",
+  pool_main_description: "A spacious pool with clean water and comfortable sun loungers to enjoy relaxation and sunbathing.",
+  pool_large_size: "Large Pool",
+  pool_large_size_desc: "Spacious pool with clean water for comfortable swimming and relaxation.",
+  pool_sun_loungers: "Sun Loungers",
+  pool_sun_loungers_desc: "Comfortable sun loungers around the pool for sunbathing and relaxation.",
+  pool_sunbathing: "Sunbathing",
+  pool_sunbathing_desc: "Perfect environment for sunbathing with direct access to the pool.",
+  pool_refreshment: "Refreshment",
+  pool_refreshment_desc: "Enjoy the coolness of the water and the tranquility of the surroundings.",
+  pool_gallery_title: "Pool Gallery",
+  pool_image: "Pool",
+  pool_cta_title: "Book Your Stay",
+  pool_cta_description: "Come and enjoy our luxurious swimming pool and comfortable sun loungers. Book now for the best experience.",
 }; 

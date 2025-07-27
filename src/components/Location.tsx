@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { MapPin, Umbrella, Utensils, Landmark, Mountain, Car, Clock, Compass, Plane, Train, Diamond } from "lucide-react";
 import { motion } from "framer-motion";
+import PoolSection from "./PoolSection";
 
 const iconClass = "h-8 w-8 text-luxury-gold drop-shadow-goldGlow";
 const infoIconClass = "h-6 w-6 text-luxury-gold";
@@ -264,6 +265,9 @@ const Location = () => {
             ))}
           </div>
         </div>
+
+        {/* Pool Section */}
+        <PoolSection />
       </div>
     </section>
   );

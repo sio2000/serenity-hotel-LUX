@@ -1304,6 +1304,93 @@ const translations = {
     en: "Video",
     el: "Βίντεο",
     sq: "Video"
+  },
+  
+  // Pool Section
+  pool_section_title: {
+    en: "Our Large Swimming Pool",
+    el: "Η Μεγάλη Πισίνα μας",
+    sq: "Pishina Jonë e Madhe"
+  },
+  pool_section_subtitle: {
+    en: "Discover our luxurious swimming pool with comfortable sun loungers and enjoy the tranquility of water under the Albanian sun.",
+    el: "Ανακαλύψτε την πολυτελή πισίνα μας με τις άνετες ξαπλώστρες και απολαύστε την ηρεμία του νερού υπό τον αλβανικό ήλιο.",
+    sq: "Zbuloni pishinën tonë luksoze me shtretër të rehatshme dhe shijoni qetësinë e ujit nën diellin shqiptar."
+  },
+  pool_main_image_alt: {
+    en: "Villa Serenity's large swimming pool with sun loungers",
+    el: "Η μεγάλη πισίνα της Villa Serenity με ξαπλώστρες",
+    sq: "Pishina e madhe e Villa Serenity me shtretër"
+  },
+           pool_main_title: {
+           en: "Luxury Swimming Pool Oasis",
+           el: "Πολυτελής Πισίνα Οάση",
+           sq: "Oazë Pishine Luksoze"
+         },
+  pool_main_description: {
+    en: "A spacious pool with clean water and comfortable sun loungers to enjoy relaxation and sunbathing.",
+    el: "Μια ευρύχωρη πισίνα με καθαρό νερό και άνετες ξαπλώστρες για να απολαύσετε την ηρεμία και την ηλιοθεραπεία.",
+    sq: "Një pishinë e bollshme me ujë të pastër dhe shtretër të rehatshme për të shijuar relaksimin dhe diellin."
+  },
+  pool_large_size: {
+    en: "Large Pool",
+    el: "Μεγάλη Πισίνα",
+    sq: "Pishina e Madhe"
+  },
+  pool_large_size_desc: {
+    en: "Spacious pool with clean water for comfortable swimming and relaxation.",
+    el: "Ευρύχωρη πισίνα με καθαρό νερό για άνετη κολύμβηση και χαλάρωση.",
+    sq: "Pishinë e bollshme me ujë të pastër për not të rehatshëm dhe relaksim."
+  },
+  pool_sun_loungers: {
+    en: "Sun Loungers",
+    el: "Ξαπλώστρες",
+    sq: "Shtretër"
+  },
+  pool_sun_loungers_desc: {
+    en: "Comfortable sun loungers around the pool for sunbathing and relaxation.",
+    el: "Άνετες ξαπλώστρες γύρω από την πισίνα για ηλιοθεραπεία και χαλάρωση.",
+    sq: "Shtretër të rehatshme rreth pishinës për diell dhe relaksim."
+  },
+  pool_sunbathing: {
+    en: "Sunbathing",
+    el: "Ηλιοθεραπεία",
+    sq: "Diell"
+  },
+  pool_sunbathing_desc: {
+    en: "Perfect environment for sunbathing with direct access to the pool.",
+    el: "Ιδανικό περιβάλλον για ηλιοθεραπεία με άμεση πρόσβαση στην πισίνα.",
+    sq: "Mjedis i përsosur për diell me akses të drejtpërdrejtë në pishinë."
+  },
+  pool_refreshment: {
+    en: "Refreshment",
+    el: "Δροσιά",
+    sq: "Freskim"
+  },
+  pool_refreshment_desc: {
+    en: "Enjoy the coolness of the water and the tranquility of the surroundings.",
+    el: "Απολαύστε τη δροσιά του νερού και την ηρεμία του περιβάλλοντος.",
+    sq: "Shijoni freskinë e ujit dhe qetësinë e mjedisit."
+  },
+  pool_gallery_title: {
+    en: "Pool Gallery",
+    el: "Φωτογραφίες της Πισίνας",
+    sq: "Galeria e Pishinës"
+  },
+  pool_image: {
+    en: "Pool",
+    el: "Πισίνα",
+    sq: "Pishina"
+  },
+  pool_cta_title: {
+    en: "Book Your Stay",
+    el: "Κρατήστε τη Διαμονή σας",
+    sq: "Rezervoni Qëndrimin Tuaj"
+  },
+  pool_cta_description: {
+    en: "Come and enjoy our luxurious swimming pool and comfortable sun loungers. Book now for the best experience.",
+    el: "Ελάτε να απολαύσετε την πολυτελή πισίνα μας και τις άνετες ξαπλώστρες. Κρατήστε τώρα για την καλύτερη εμπειρία.",
+    sq: "Ejani dhe shijoni pishinën tonë luksoze dhe shtretër të rehatshme. Rezervoni tani për përvojën më të mirë."
   }
 };
 
