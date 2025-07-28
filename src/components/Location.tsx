@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { MapPin, Umbrella, Utensils, Landmark, Mountain, Car, Clock, Compass, Plane, Train, Diamond } from "lucide-react";
+import { MapPin, Umbrella, Utensils, Landmark, Mountain, Car, Clock, Compass, Plane, Train, Diamond, ExternalLink, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import PoolSection from "./PoolSection";
 
@@ -9,6 +9,25 @@ const infoIconClass = "h-6 w-6 text-luxury-gold";
 
 const Location = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  const [mapError, setMapError] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Handle map load error
+  const handleMapError = () => {
+    setMapError(true);
+  };
 
   const attractions = [
     {
@@ -85,6 +104,9 @@ const Location = () => {
     "/lovable-uploads/room2.png",
     "/lovable-uploads/86d9639c-4497-4529-8893-41d267f68fd7.png"
   ];
+
+  // Google Maps URL for Villa Serenity
+  const googleMapsUrl = "https://www.google.com/maps?q=Villa+Serenity+Rruga+Ruhi+Deliu+Saranda+Albania&ll=39.8753,20.0056&z=16";
 
   return (
     <section id="location" className="relative bg-gradient-to-b from-luxury-black via-luxury-navy to-luxury-black py-0 overflow-hidden">
@@ -196,30 +218,84 @@ const Location = () => {
               </ul>
             </motion.div>
 
+            {/* Map Section - Mobile Optimized */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="rounded-2xl overflow-hidden shadow-xl h-64 md:h-72 border border-luxury-gold/30"
+              className="rounded-2xl overflow-hidden shadow-xl border border-luxury-gold/30 bg-luxury-black/90"
               style={{ boxShadow: '0 8px 32px 0 rgba(224, 203, 168, 0.15)' }}
             >
-              <iframe
-                src="https://www.google.com/maps?q=V2GJ%2BR2X+Saranda+Albania&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Villa Serenity Location"
-              />
+              {/* Mobile Map Placeholder */}
+              {isMobile && !mapError ? (
+                <div className="h-64 md:h-72 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-luxury-black/80 to-luxury-navy/80 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <Smartphone className="h-16 w-16 mx-auto text-luxury-gold mb-4" />
+                      <h4 className="text-xl font-semibold text-luxury-gold mb-2 font-playfair">
+                        {t("mobile_map_title") || "Interactive Map"}
+                      </h4>
+                      <p className="text-luxury-gold/80 mb-4 text-sm">
+                        {t("mobile_map_description") || "Tap below to open Google Maps"}
+                      </p>
+                      <a
+                        href={googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-luxury-gold text-luxury-black px-6 py-3 rounded-lg font-semibold hover:bg-luxury-gold/90 transition-colors"
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                        {t("open_in_maps") || "Open in Maps"}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Desktop Map */
+                <div className="h-64 md:h-72 relative">
+                  {mapError ? (
+                    <div className="absolute inset-0 bg-gradient-to-br from-luxury-black/80 to-luxury-navy/80 flex items-center justify-center">
+                      <div className="text-center p-6">
+                        <MapPin className="h-16 w-16 mx-auto text-luxury-gold mb-4" />
+                        <h4 className="text-xl font-semibold text-luxury-gold mb-2 font-playfair">
+                          {t("map_unavailable") || "Map Unavailable"}
+                        </h4>
+                        <p className="text-luxury-gold/80 mb-4 text-sm">
+                          {t("map_error_description") || "Please use the button below to view our location"}
+                        </p>
+                        <a
+                          href={googleMapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-luxury-gold text-luxury-black px-6 py-3 rounded-lg font-semibold hover:bg-luxury-gold/90 transition-colors"
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                          {t("view_on_google_maps") || "View on Google Maps"}
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    <iframe
+                      src="https://www.google.com/maps?q=Villa+Serenity+Rruga+Ruhi+Deliu+Saranda+Albania&ll=39.8753,20.0056&z=16&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Villa Serenity Location - Rruga Ruhi Deliu"
+                      onError={handleMapError}
+                    />
+                  )}
+                </div>
+              )}
             </motion.div>
 
             <motion.a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              href="https://www.google.com/maps?q=V2GJ%2BR2X+Saranda+Albania"
+              href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 border-2 border-luxury-gold text-luxury-gold font-semibold py-4 px-8 rounded-xl hover:bg-luxury-gold hover:text-luxury-black hover:shadow-goldGlow transition-all duration-300 group"
